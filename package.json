@@ -2,9 +2,10 @@
   "name": "smart-brain-api",
   "version": "1.0.0",
   "description": "Api for face recognition app",
-  "main": "index.js",
+  "main": "src/api.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "./node_modules/.bin/netlify serve src",
+    "build": "./node_modules/.bin/netlify build src",
     "start:dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,9 +15,11 @@
     "bcrypt": "^5.0.1",
     "clarifai": "^2.9.1",
     "cors": "^2.8.5",
-    "express": "^4.17.2",
-    "knex": "^1.0.2",
-    "pg": "^8.7.1"
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "netlify-cli": "^2.12.0",
+    "pg": "^8.7.1",
+    "serverless-http": "^3.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

@@ -1,6 +1,9 @@
 
 # Node modules
 /node_modules
+functions
 
 # ENV variables
 .env
+# Local Netlify folder
+.netlify

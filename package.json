@@ -2,11 +2,11 @@
   "name": "smart-brain-api",
   "version": "1.0.0",
   "description": "Api for face recognition app",
-  "main": "src/api.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "node src/api.js",
-    "start:dev": "nodemon server.js",
+    "build": "yarn install",
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alibi Melis",

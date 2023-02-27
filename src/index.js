@@ -22,15 +22,14 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-const router = express.Router();
 
 
-router.get("/", (req, res) => res.json("it is working"));
-router.post("/signin", signIn.handleSignIn(db, bcrypt));
-router.post("/register", register.handleRegister(db, bcrypt));
-router.get("/profile/:id", profile.handleProfileGet(db));
-router.put("/image", image.handleImage(db));
-router.post("/imageurl", image.handleApiCall);
+app.get("/", (req, res) => res.json("it is working"));
+app.post("/signin", signIn.handleSignIn(db, bcrypt));
+app.post("/register", register.handleRegister(db, bcrypt));
+app.get("/profile/:id", profile.handleProfileGet(db));
+app.put("/image", image.handleImage(db));
+app.post("/imageurl", image.handleApiCall);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`App is running on port ${process.env.PORT}`);

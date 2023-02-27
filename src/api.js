@@ -33,8 +33,6 @@ router.get("/profile/:id", profile.handleProfileGet(db));
 router.put("/image", image.handleImage(db));
 router.post("/imageurl", image.handleApiCall);
 
-app.use(`/.netlify/functions/api`, router);
-
-module.exports = app;
-module.exports.handler = serverless(app);
-
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`App is running on port ${process.env.PORT}`);
+});

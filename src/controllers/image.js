@@ -8,7 +8,7 @@ metadata.set("authorization", "Key " + process.env.CLARIFAI_API_KEY);
 const handleApiCall = (req, res) => {
   stub.PostModelOutputs(
     {
-      model_id: "6dc7e46bc9124c5c8824be4822abe105",
+      model_id: "face-detection",
       inputs: [
         { data: { image: { url: req.body.imageurl } } },
       ],
